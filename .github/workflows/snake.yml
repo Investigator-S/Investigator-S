@@ -1,0 +1,49 @@
+
+name: Generate Cyber Snake Contribution Game
+
+on:
+  schedule:
+    # 00:20 GMT / 01:20 BST
+    - cron: "20 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-animations
+  cancel-in-progress: false
+
+jobs:
+  snake:
+    name: Generate Live Cyber Snake
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Generate Snake Animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: Investigator-S
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?palette=github&color_snake=%2300FF66
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2300FF66&color_dots=%23161b22,%230e4429,%23006d32,%2326a641,%2339d353
+
+      - name: Verify Snake SVG
+        run: |
+          test -s dist/github-contribution-grid-snake.svg
+          test -s dist/github-contribution-grid-snake-dark.svg
+          ls -lh dist/*.svg
+
+      - name: Publish Snake
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./dist
+          keep_files: true
+          commit_message: "Update Cyber Snake contribution animation"
