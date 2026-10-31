@@ -1,130 +1,237 @@
+
 <div align="center">
 
-<pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│  ●  ●  ●   [Investigator-S@soc-workstation: ~] - Defensive Ops Terminal     │
-└─────────────────────────────────────────────────────────────────────────────┘
-</pre>
-
 <a href="https://github.com/Investigator-S">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=00FF66&background=0D111700&center=true&vCenter=true&width=700&lines=Investigator-S+--role=%22OSINT+Analyst+%26+Defensive+Security%22;extracting+threat-actor+infrastructure+%26+malicious+C2+IPs;intercepting+pre-encryption+ransomware+telemetry;auditing+AWS+IAM+posture+%26+cloud+misconfigurations" alt="Animated Terminal Header" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2800&pause=1000&color=00FF66&background=0D111700&center=true&vCenter=true&width=600&height=100&multiline=true&repeat=true&lines=Investigator-S+%7C+OSINT+Analyst;Threat+Intelligence+%26+Defensive+Security;Malware+Analysis+%7C+Cloud+Security;Network+Forensics+%7C+Infrastructure+Mapping" width="100%" alt="Investigator-S Terminal Header" />
 </a>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/OPERATIONAL%20STATUS-ACTIVE-00FF66?style=flat-square&logo=radar&logoColor=black" />
-  <img src="https://img.shields.io/badge/PRIMARY%20FOCUS-BLUE%20TEAM%20DEFENSE-0d1117?style=flat-square&logo=shield&logoColor=00FF66" />
-  <img src="https://img.shields.io/badge/THREAT%20TELEMETRY-MONITORING-0d1117?style=flat-square&logo=wireshark&logoColor=00FF66" />
-  <img src="https://img.shields.io/badge/CLOUD-AWS%20HARDENED-0d1117?style=flat-square&logo=amazonwebservices&logoColor=00FF66" />
-</p>
+**OSINT ANALYST | DEFENSIVE SECURITY | CYBER FORENSICS**
+
+<img src="https://img.shields.io/badge/STATUS-ACTIVE-00FF66?style=flat-square&logo=radar&logoColor=black" />
+<img src="https://img.shields.io/badge/FOCUS-BLUE%20TEAM-0d1117?style=flat-square&logo=shield&logoColor=00FF66" />
+<img src="https://img.shields.io/badge/THREAT%20INTEL-MONITORING-0d1117?style=flat-square&logo=wireshark&logoColor=00FF66" />
+<img src="https://img.shields.io/badge/CLOUD-AWS-0d1117?style=flat-square&logo=amazonwebservices&logoColor=00FF66" />
 
 </div>
 
 ---
 
-### ⚡ Operational Telemetry & Active Arsenal
+## `$ whoami`
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,bash,c,linux,aws,docker,git,regex,vscode,githubactions&theme=dark" />
-  </a>
-</p>
-
-```diff
-+ [SYSTEM READY] Node: Investigator-S | Role: OSINT & Threat Defense
-+ [TELEMETRY]    Scanning C2 endpoints, entropy spikes, and cloud perimeters
-+ [SUBSYSTEMS]   AWS Auditing (Active) • Malware Triage (Active) • EDR Watchdog (Active)
+```bash
+USER       : Investigator-S
+ROLE       : OSINT Analyst & Defensive Security
+SPECIALTY  : Cyber Threat Intelligence
+FOCUS      : Malware Analysis | Network Forensics
+OPERATIONS : Threat Hunting | Cloud Security
+ENVIRONMENT: Linux | Python | AWS
+STATUS     : ACTIVE
 ```
 
 ---
 
-### 🖥️ `$ cat /etc/security_modules/active_deployments` *(Click to expand)*
+##  Operational Arsenal
+
+<div align="center">
+
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=py,bash,c,linux,aws,docker,git,regex,vscode,githubactions&theme=dark" width="100%" alt="Technical Skills" />
+</a>
+
+</div>
+
+---
+
+## `$ cat /etc/security_modules/active_deployments`
 
 <details open>
-  <summary><b>🟢 [MODULE 01] Ransomware-Early-Warning-System-Design</b></summary>
-  <br/>
+<summary><b>MODULE 01 — Ransomware Early Warning System</b></summary>
 
-  > **Mission:** Intercept and neutralize ransomware behavior before payload encryption completes.
+**MISSION:** Detect and interrupt ransomware activity before payload encryption completes.
 
-  ```bash
-  $ ./edr_watchdog --monitor-io --canary-trap /var/canaries/ --entropy-threshold 7.25
-  ```
-  * **Shannon Entropy Analysis:** Real-time calculation of bulk file entropy to spot rapid AES/ChaCha cipher operations.
-  * **Tripwire Canary Decoys:** High-sensitivity sentinel files that trigger instant process tree quarantine upon alteration.
-  * **VSS Defense:** Behavioral interception of shadow copy purge commands (`vssadmin delete shadows`, `wbadmin`, `wmic`).
+```bash
+./edr_watchdog --monitor-io \
+  --canary-trap /var/canaries/ \
+  --entropy-threshold 7.25
+```
+
+**CAPABILITIES**
+
+- **Shannon Entropy Analysis:** Detect abnormal file entropy changes and bulk encryption behavior.
+- **Tripwire Canary Decoys:** Monitor sentinel files and trigger alerts on unauthorized modification.
+- **VSS Defense:** Detect attempts to delete Windows shadow copies using `vssadmin`, `wbadmin`, and `wmic`.
+
 </details>
 
 <details open>
-  <summary><b>🟢 [MODULE 02] AWS_SPLOIT_TOOL (Cloud Posture Engine)</b></summary>
-  <br/>
+<summary><b>MODULE 02 — AWS_SPLOIT | Cloud Posture Engine</b></summary>
 
-  > **Mission:** Continuous vulnerability assessment and attack-path enumeration across AWS estates.
+**MISSION:** Continuous AWS security assessment and attack-path enumeration.
 
-  ```bash
-  $ python3 aws_sploit.py --audit-iam --enumerate-s3 --check-security-groups --region all
-  ```
-  * **IAM Privilege Escalation:** Detects dangerous permission combinations (`iam:PassRole`, `sts:AssumeRole` policy loopholes).
-  * **Public Storage Leaks:** Scans S3 buckets for open ACLs, public write privileges, and missing KMS encryption.
-  * **Exposed Ingress Vectors:** Flags unmonitored security groups exposing high-risk ports (`22`, `3389`, `5432`, `9200`).
+```bash
+python3 aws_sploit.py \
+  --audit-iam \
+  --enumerate-s3 \
+  --check-security-groups \
+  --region all
+```
+
+**CAPABILITIES**
+
+- **IAM Privilege Escalation:** Identify dangerous permission combinations, including `iam:PassRole` and `sts:AssumeRole`.
+- **Public Storage Exposure:** Detect risky S3 ACLs, public write permissions, and missing encryption.
+- **Exposed Ingress Vectors:** Identify risky security group rules involving ports `22`, `3389`, `5432`, and `9200`.
+
 </details>
 
 <details>
-  <summary><b>🟢 [MODULE 03] ThreatLens-Security-Suite (Malware Triage)</b></summary>
-  <br/>
+<summary><b>MODULE 03 — ThreatLens | Malware Triage Suite</b></summary>
 
-  > **Mission:** Automated binary dissection, memory inspection, and C2 IP indicator harvesting.
+**MISSION:** Automated binary analysis, malware triage, and C2 indicator extraction.
 
-  ```bash
-  $ threatlens triage --sample payload.bin --extract-c2 --enrich-abuseipdb
-  ```
-  * **C2 Harvester:** Extracts hardcoded IP addresses, domains, and port markers from unpacked PE configurations.
-  * **Static Forensics:** Section entropy mapping, string decryption, and suspicious import analysis.
-  * **Threat Intel Feeds:** Correlates extracted infrastructure against VirusTotal, AlienVault OTX, and AbuseIPDB.
+```bash
+threatlens triage \
+  --sample payload.bin \
+  --extract-c2 \
+  --enrich-abuseipdb
+```
+
+**CAPABILITIES**
+
+- **C2 Harvester:** Extract embedded IP addresses, domains, and port indicators.
+- **Static Forensics:** Section entropy mapping, string analysis, and suspicious import inspection.
+- **Threat Intelligence:** Correlate extracted infrastructure with VirusTotal, AlienVault OTX, and AbuseIPDB.
+
 </details>
 
 <details>
-  <summary><b>🟢 [MODULE 04] TR3-Astra (Network & Recon Surface)</b></summary>
-  <br/>
+<summary><b>MODULE 04 — TR3-Astra | Network Reconnaissance</b></summary>
 
-  > **Mission:** Asynchronous reconnaissance engine for digital asset mapping and surface attack audits.
+**MISSION:** Asynchronous reconnaissance and external attack-surface assessment.
 
-  ```bash
-  $ astra scan --target target.domain --concurrency 50 --verify-headers
-  ```
-  * **Port & Service Sweep:** High-throughput TCP SYN/ACK scanner with heuristic banner grabbing.
-  * **Compliance & Headers:** Automatic verification of `HSTS`, `Content-Security-Policy`, and SSL/TLS cipher suites.
-  * **Passive OSINT Footprinting:** Certificate transparency mining (`crt.sh`) and reverse ASN routing correlation.
+```bash
+astra scan \
+  --target target.domain \
+  --concurrency 50 \
+  --verify-headers
+```
+
+**CAPABILITIES**
+
+- **Port & Service Discovery:** TCP service scanning and banner analysis.
+- **Security Auditing:** Verify HSTS, Content Security Policy, and SSL/TLS configurations.
+- **Passive OSINT:** Certificate transparency analysis and ASN infrastructure correlation.
+
 </details>
 
 ---
 
-### 🕹️ `$ ./launch_arcade.sh --mode=all` *(Interactive Contribution Games)*
+## `$ ./launch_arcade.sh --mode=all`
+
+<div align="center">
+
+###  CYBER ARCADE
+
+`[ INITIALIZING ARCADE SYSTEM ]`
+
+`[ GAME MODULES: LOADED ]`
+
+</div>
 
 <details open>
-  <summary><b>🎮 Arcade 01: Cyber Snake Defense Grid</b></summary>
-  <br/>
-  <p align="center">
-    <img alt="Cyber Snake Game" src="https://raw.githubusercontent.com/Investigator-S/Investigator-S/gh-pages/github-contribution-grid-snake-dark.svg" width="100%" />
-  </p>
+<summary><b> ARCADE 01 — PAC-MAN | Contribution Hunter</b></summary>
+
+<div align="center">
+
+<img
+  src="https://raw.githubusercontent.com/Investigator-S/Investigator-S/output/pacman-contribution-graph.svg"
+  width="100%"
+  alt="Pac-Man GitHub Contribution Animation"
+/>
+
+</div>
+
 </details>
 
-<details open>
-  <summary><b>🕹️ Arcade 02: Pac-Man Threat Ingestion Arena</b></summary>
-  <br/>
-  <p align="center">
-    <img alt="Pacman Contribution Game" src="https://raw.githubusercontent.com/Investigator-S/Investigator-S/gh-pages/github-contribution-grid-pacman-dark.svg" width="100%" />
-  </p>
+<details>
+<summary><b> ARCADE 02 — CYBER SNAKE | Defense Grid</b></summary>
+
+<div align="center">
+
+<img
+  src="https://raw.githubusercontent.com/Investigator-S/Investigator-S/gh-pages/github-contribution-grid-snake-dark.svg"
+  width="100%"
+  alt="Cyber Snake Contribution Animation"
+/>
+
+</div>
+
+</details>
+
+<details>
+<summary><b> ARCADE 03 — SPACE INVADERS | Retro Defense</b></summary>
+
+<div align="center">
+
+```text
+   _____ ____   _    ____ _____
+  / ____|  _ \ / \  / ___| ____|
+ | (___ | |_) / _ \| |   |  _|
+  \___ \|  __/ ___ \ |___| |___
+  ____) | | /_/   \_\____|_____|
+ |_____/|_|
+
+ [ SYSTEM STATUS: READY ]
+
+ [ DEFEND THE NETWORK ]
+ [ INSERT COIN ]
+```
+
+</div>
+
 </details>
 
 ---
 
-### 📊 Live Activity Stream & Contribution Metrics
+## `$ cat /etc/identity/operational_profile`
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=Investigator-S&theme=tokyonight&hide_border=true" width="49%" alt="GitHub Streak" />
-</p>
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=Investigator-S&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0D1117&title_color=00FF66&icon_color=00FF66&text_color=C9D1D9" width="100%" alt="GitHub Statistics" />
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Investigator-S&theme=dark&hide_border=true&background=0D1117&ring=00FF66&fire=00FF66&currStreakLabel=00FF66" width="100%" alt="GitHub Contribution Streak" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Investigator-S&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0D1117&title_color=00FF66&text_color=C9D1D9" width="100%" alt="Top Programming Languages" />
+
+</div>
+
+---
+
+## `$ ./system_status.sh`
+
+```text
+[+] OSINT ENGINE              : ONLINE
+[+] THREAT INTELLIGENCE       : ACTIVE
+[+] MALWARE TRIAGE            : READY
+[+] NETWORK FORENSICS         : READY
+[+] CLOUD SECURITY            : MONITORING
+[+] CYBER ARCADE              : INITIALIZED
+
+[EOF] Threat monitoring subroutines active.
+```
 
 ---
 
 <div align="center">
-  <sub><code>[EOF] Threat monitoring subroutines active. Terminal idle.</code></sub>
+
+### INVESTIGATOR-S
+
+**OSINT • DIGITAL FORENSICS • THREAT INTELLIGENCE • DEFENSIVE SECURITY**
+
+<a href="https://github.com/Investigator-S">
+  <img src="https://img.shields.io/badge/GitHub-INVESTIGATOR--S-0d1117?style=for-the-badge&logo=github&logoColor=00FF66" />
+</a>
+
+<sub><code>[EOF] Terminal idle. Monitoring continues.</code></sub>
+
 </div>
