@@ -1,0 +1,52 @@
+
+name: Generate Pac-Man Contribution Game
+
+on:
+  schedule:
+    # 00:05 GMT / 01:05 BST
+    - cron: "5 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-animations
+  cancel-in-progress: false
+
+jobs:
+  pacman:
+    name: Generate Live Pac-Man
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Prepare Output
+        run: mkdir -p dist
+
+      - name: Generate Pac-Man Game
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: Investigator-S
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          games: "pacman"
+          player_style: "aggressive"
+          hide_month_labels: "false"
+
+      - name: Verify Pac-Man SVG
+        run: |
+          test -s dist/pacman-contribution-graph.svg
+          test -s dist/pacman-contribution-graph-dark.svg
+          ls -lh dist/*.svg
+
+      - name: Publish Pac-Man
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./dist
+          keep_files: true
+          commit_message: "Update Pac-Man contribution animation"
