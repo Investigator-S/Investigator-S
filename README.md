@@ -44,15 +44,12 @@ STATUS     : ACTIVE
 
 ## `$ cat /etc/security_modules/active_deployments`
 
-<details open>
-<summary><b>MODULE 01 — Ransomware Early Warning System</b></summary>
+<b>MODULE 01 — Ransomware Early Warning System</b>
 
-**MISSION:** Detect and interrupt ransomware activity before payload encryption completes.
+Detect and interrupt ransomware activity before payload encryption completes.
 
 ```bash
-./edr_watchdog --monitor-io \
-  --canary-trap /var/canaries/ \
-  --entropy-threshold 7.25
+./edr_watchdog --monitor-io --canary-trap /var/canaries--entropy-threshold 7.25
 ```
 
 **CAPABILITIES**
@@ -61,19 +58,14 @@ STATUS     : ACTIVE
 - **Tripwire Canary Decoys:** Monitor sentinel files and trigger alerts on unauthorized modification.
 - **VSS Defense:** Detect attempts to delete Windows shadow copies using `vssadmin`, `wbadmin`, and `wmic`.
 
-</details>
 
-<details open>
-<summary><b>MODULE 02 — AWS_SPLOIT | Cloud Posture Engine</b></summary>
 
-**MISSION:** Continuous AWS security assessment and attack-path enumeration.
+<b>MODULE 02 — AWS_SPLOIT | Cloud Posture Engine</b>
+
+Continuous AWS security assessment and attack-path enumeration.
 
 ```bash
-python3 aws_sploit.py \
-  --audit-iam \
-  --enumerate-s3 \
-  --check-security-groups \
-  --region all
+python3 aws_sploit.py --audit-iam --enumerate-s3 --check-security-groups --region all
 ```
 
 **CAPABILITIES**
@@ -82,18 +74,13 @@ python3 aws_sploit.py \
 - **Public Storage Exposure:** Detect risky S3 ACLs, public write permissions, and missing encryption.
 - **Exposed Ingress Vectors:** Identify risky security group rules involving ports `22`, `3389`, `5432`, and `9200`.
 
-</details>
 
-<details>
-<summary><b>MODULE 03 — ThreatLens | Malware Triage Suite</b></summary>
+<b>MODULE 03 — ThreatLens | Malware Triage Suite</b>
 
-**MISSION:** Automated binary analysis, malware triage, and C2 indicator extraction.
+Automated binary analysis, malware triage, and C2 indicator extraction.
 
 ```bash
-threatlens triage \
-  --sample payload.bin \
-  --extract-c2 \
-  --enrich-abuseipdb
+threatlens triage --sample payload.bin --extract-c2 --enrich-abuseipdb
 ```
 
 **CAPABILITIES**
@@ -102,18 +89,13 @@ threatlens triage \
 - **Static Forensics:** Section entropy mapping, string analysis, and suspicious import inspection.
 - **Threat Intelligence:** Correlate extracted infrastructure with VirusTotal, AlienVault OTX, and AbuseIPDB.
 
-</details>
 
-<details>
-<summary><b>MODULE 04 — TR3-Astra | Network Reconnaissance</b></summary>
+<b>MODULE 04 — TR3-Astra | Network Reconnaissance</b>
 
-**MISSION:** Asynchronous reconnaissance and external attack-surface assessment.
+Asynchronous reconnaissance and external attack-surface assessment.
 
 ```bash
-astra scan \
-  --target target.domain \
-  --concurrency 50 \
-  --verify-headers
+astra scan --target target.domain --concurrency 50 --verify-headers
 ```
 
 **CAPABILITIES**
@@ -122,39 +104,18 @@ astra scan \
 - **Security Auditing:** Verify HSTS, Content Security Policy, and SSL/TLS configurations.
 - **Passive OSINT:** Certificate transparency analysis and ASN infrastructure correlation.
 
-</details>
 
 ---
 
-## `$ ./launch_arcade.sh --mode=all`
-
 <div align="center">
-
-###  CYBER ARCADE
-
-`[ INITIALIZING ARCADE SYSTEM ]`
-
-`[ GAME MODULES: LOADED ]`
-
 </div>
-
-<details open>
-<summary><b> ARCADE 01 — PAC-MAN | Contribution Hunter</b></summary>
-
 <div align="center">
-
 <img
   src="https://raw.githubusercontent.com/Investigator-S/Investigator-S/output/pacman-contribution-graph.svg"
   width="100%"
   alt="Pac-Man GitHub Contribution Animation"
 />
-
 </div>
-
-</details>
-
-<details>
-<summary><b> ARCADE 02 — CYBER SNAKE | Defense Grid</b></summary>
 
 <div align="center">
 
@@ -165,31 +126,6 @@ astra scan \
 />
 
 </div>
-
-</details>
-
-<details>
-<summary><b> ARCADE 03 — SPACE INVADERS | Retro Defense</b></summary>
-
-<div align="center">
-
-```text
-   _____ ____   _    ____ _____
-  / ____|  _ \ / \  / ___| ____|
- | (___ | |_) / _ \| |   |  _|
-  \___ \|  __/ ___ \ |___| |___
-  ____) | | /_/   \_\____|_____|
- |_____/|_|
-
- [ SYSTEM STATUS: READY ]
-
- [ DEFEND THE NETWORK ]
- [ INSERT COIN ]
-```
-
-</div>
-
-</details>
 
 ---
 
