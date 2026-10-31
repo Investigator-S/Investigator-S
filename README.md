@@ -107,25 +107,38 @@ astra scan --target target.domain --concurrency 50 --verify-headers
 
 ---
 
-<div align="center">
-</div>
-<div align="center">
-<img
-  src="https://raw.githubusercontent.com/Investigator-S/Investigator-S/output/pacman-contribution-graph.svg"
-  width="100%"
-  alt="Pac-Man GitHub Contribution Animation"
-/>
-</div>
+<!-- ================= PAC-MAN ================= -->
 
 <div align="center">
 
-<img
-  src="https://raw.githubusercontent.com/Investigator-S/Investigator-S/gh-pages/github-contribution-grid-snake-dark.svg"
-  width="100%"
-  alt="Cyber Snake Contribution Animation"
-/>
+<img src="https://raw.githubusercontent.com/Investigator-S/Investigator-S/output/pacman-contribution-graph.svg"
+     width="100%"
+     alt="Pac-Man GitHub Contribution Animation" />
 
 </div>
+
+<!-- ================= CYBER SNAKE ================= -->
+
+<div align="center">
+
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/Investigator-S/Investigator-S/output/github-contribution-grid-snake-dark.svg"
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/Investigator-S/Investigator-S/output/github-contribution-grid-snake.svg"
+  />
+  <img
+    src="https://raw.githubusercontent.com/Investigator-S/Investigator-S/output/github-contribution-grid-snake.svg"
+    width="100%"
+    alt="Cyber Snake GitHub Contribution Animation"
+  />
+</picture>
+
+</div>
+
 
 ---
 
