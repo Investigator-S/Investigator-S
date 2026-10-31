@@ -2,7 +2,7 @@
 <div align="center">
 
 <a href="https://github.com/Investigator-S">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2800&pause=1000&color=00FF66&background=0D111700&center=true&vCenter=true&width=600&height=100&multiline=true&repeat=true&lines=Investigator-S+%7C+OSINT+Analyst;Threat+Intelligence+%26+Defensive+Security;Malware+Analysis+%7C+Cloud+Security;Network+Forensics+%7C+Infrastructure+Mapping" width="100%" alt="Investigator-S Terminal Header" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2800&pause=1000&color=00FF66&background=0D111700&center=true&vCenter=true&width=600&height=100&multiline=true&repeat=true&lines=Investigator-S+%7C+OSINT+Analyst;Threat+Intelligence+%26+Defensive+Security;Malware+Analysis+%7C+Cloud+Security;Network+Forensics" width="100%" alt="Investigator-S Terminal Header" />
 </a>
 
 **OSINT ANALYST | DEFENSIVE SECURITY | CYBER FORENSICS**
@@ -129,32 +129,14 @@ astra scan --target target.domain --concurrency 50 --verify-headers
 
 ---
 
-## `$ cat /etc/identity/operational_profile`
-
 <div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Investigator-S&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0D1117&title_color=00FF66&icon_color=00FF66&text_color=C9D1D9" width="100%" alt="GitHub Statistics" />
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=Investigator-S&theme=dark&hide_border=true&background=0D1117&ring=00FF66&fire=00FF66&currStreakLabel=00FF66" width="100%" alt="GitHub Contribution Streak" />
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Investigator-S&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0D1117&title_color=00FF66&text_color=C9D1D9" width="100%" alt="Top Programming Languages" />
 
 </div>
 
 ---
-
-## `$ ./system_status.sh`
-
-```text
-[+] OSINT ENGINE              : ONLINE
-[+] THREAT INTELLIGENCE       : ACTIVE
-[+] MALWARE TRIAGE            : READY
-[+] NETWORK FORENSICS         : READY
-[+] CLOUD SECURITY            : MONITORING
-[+] CYBER ARCADE              : INITIALIZED
-
-[EOF] Threat monitoring subroutines active.
-```
 
 ---
 
